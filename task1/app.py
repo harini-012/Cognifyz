@@ -1,8 +1,8 @@
 import streamlit as st 
 import pandas as pd
 import pickle 
-model=pickle.load(open("model.pkl","rb"))
-columns=pickle.load(open("columns.pkl","rb"))
+model=pickle.load(open("task1/model.pkl","rb"))
+columns=pickle.load(open("task1/columns.pkl","rb"))
 st.set_page_config(page_title="Restaurant Rating predictor",layout="centered")
 st.title("Restaurant Rating predictor")
 if "clear" not in st.session_state:
