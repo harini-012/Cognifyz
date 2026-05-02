@@ -1,0 +1,74 @@
+body
+{
+	font-family:Arial;
+	background: linear-gradient(to right,#ffecd2,#fcb69f);
+	margin:0;
+}
+.container 
+{
+	width:60%;
+	margin:auto;
+	background:white;
+	padding:20px;
+	margin-top:40px;
+	border-radius:10px;
+	box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+h1
+{
+	text-align:center;
+}
+.hero img
+{
+	width:100%;
+	border-radius:10px;
+	margin-bottom:20px;
+}
+form
+{
+	display:flex;
+	flex-direction:column;
+}
+input,button
+{
+	margin:10px 0;
+	padding:10px;
+	border-radius:5px;
+	border:1px solid #ccc;
+}
+button 
+{
+	background:#28a745;
+	color:white;
+	border:none;
+	cursor:pointer;
+}
+button:hover
+{
+	background:#eb5e3d;
+}
+.cards
+{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+	gap:20px;
+}
+.card
+{
+	background:#fff;
+	border-radius:10px;
+	padding:10px;
+	box-shadow:0 2px 6px rgba(0,0,0,0.2);
+	text-align:center;
+}
+.card img 
+{
+	width:100%;
+	border-radius:10px;
+}
+.no-result
+{
+	color:red;
+	text-align:center;
+	margin-top:20px;
+}
