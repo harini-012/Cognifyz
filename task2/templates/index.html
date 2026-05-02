@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurant Recommender</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body> 
+<div class="container">
+
+
+<h1>Restaurant Recommendation System</h1>
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Food Image">
+</div>
+<form method="POST">
+<label>Cuisine:</label>
+<input type="text" name="cuisine" placeholder="e.g. Japanese" required>
+<label>Price Range (1-4):</label>
+<input type="number" name="price" min="1" max="4" required>
+<label>Minimum Rating:</label>
+<input type="number" step="0.1" name="rating" min="0" max="5" required>
+<button type="submit">Get Recommendations</button>
+</form>
+{% if results and results |length>0 %}
+<h2>Top Recommendations</h2>
+<div class="cards">
+
+
+{% for r in results %}
+<div class="card">
+<img src="{{r['image']}}" alt="Food Image">
+<h3>{{r['Restaurant Name']}}</h3>
+<p><strong>Cuisine:</strong>{{r['Cuisines']}}</p>
+<p><strong>Price:</strong>{{r['Price range']}}</p>
+<p><strong>Rating:</strong>{{r['Aggregate rating']}}</p>
+</div>
+{%endfor%}
+</div>
+{% elif results is not none %}
+<p class="no-result">No restaurants found</p>
+{%endif%}
+</div>
+</body>
+</html>
