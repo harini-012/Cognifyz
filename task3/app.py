@@ -10,7 +10,7 @@ st.set_page_config(page_title="Restaurant Location Analysis",layout="wide")
 st.title("Restaurant Location-Based Analysis")
 try:
     
-    df=pd.read_csv('Dataset.csv')
+    df=pd.read_csv('task3/Dataset.csv')
     df.columns=df.columns.str.strip()
     
     st.subheader("Dataset Preview")
